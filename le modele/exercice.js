@@ -6,16 +6,16 @@ class Combatant {
         this.pos = [0, 0];
         function isClose (pos) {
             return (abs(pos.x - this.pos[0]) < 1 || abs(pos.y - this.pos[1]) < 1)
-        }
+        };
         function subitDmg (dmg) {
             this.pv = this.pv - dmg;
             return ("AAAARGH")
 
-        }
+        };
         function tape (adversaire) {
             if (adversaire.isClose(this.pos)) {
                 adversaire.subitDmg(this.dmg);
-            }
+            };
         }
     }
 }
