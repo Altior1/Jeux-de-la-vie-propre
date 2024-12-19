@@ -4,20 +4,21 @@ class Combatant {
         this.pv = pv;
         this.dmg = dmg;
         this.pos = [0, 0];
-        function isClose (pos) {
-            return (abs(pos.x - this.pos[0]) < 1 || abs(pos.y - this.pos[1]) < 1)
-        };
-        function subitDmg (dmg) {
-            this.pv = this.pv - dmg;
-            return ("AAAARGH")
-
-        };
-        function tape (adversaire) {
-            if (adversaire.isClose(this.pos)) {
-                adversaire.subitDmg(this.dmg);
-            };
-        }
     }
+    isClose (pos) {
+        return (abs(pos.x - this.pos[0]) < 1 || abs(pos.y - this.pos[1]) < 1)
+    };
+    subitDmg (dmg) {
+        this.pv = this.pv - dmg;
+        return ("AAAARGH")
+
+    };
+    tape (adversaire) {
+        if (adversaire.isClose(this.pos)) {
+            adversaire.subitDmg(this.dmg);
+        };
+    }
+
 }
 
 let Alyta = new Combatant("Alyta", "15", "3")
